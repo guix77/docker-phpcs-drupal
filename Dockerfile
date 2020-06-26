@@ -12,6 +12,6 @@ RUN mkdir ~/.composer \
  && composer global require drupal/coder squizlabs/php_codesniffer \
  && phpcs --config-set installed_paths /home/app/.composer/vendor/drupal/coder/coder_sniffer/ \
  && phpcs --config-set default_standard Drupal,DrupalPractice
-WORKDIR /app
+WORKDIR /home/app
 ENTRYPOINT ["phpcs"]
 CMD ["--version"]
